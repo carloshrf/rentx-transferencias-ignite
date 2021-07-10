@@ -12,6 +12,7 @@ export class GetBalanceController {
 
     const balance = await getBalance.execute({ user_id });
 
+    console.log(balance)
     const balanceDTO = BalanceMap.toDTO(balance);
 
     return response.json(balanceDTO);
